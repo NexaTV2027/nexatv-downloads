@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="NexaTV — escolha seu dispositivo e baixe o aplicativo.">
+  <title>NexaTV | Downloads</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <style>
+    :root{--bg:#080808;--panel:#111;--orange:#ff6500;--yellow:#ffb000;--white:#f7f7f7;--muted:#aaa}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 50% 0%,#321400 0,transparent 38%),var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif}
+    a{color:inherit}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{padding:26px 0 18px;border-bottom:1px solid #ffffff18}
+    .brand{display:flex;align-items:center;gap:13px;text-decoration:none;width:max-content}
+    .brand img{width:58px;height:58px;filter:drop-shadow(0 0 12px #ff6500aa)}
+    .brand-name{font-size:clamp(27px,5vw,42px);font-weight:950;letter-spacing:-2px;font-style:italic}
+    .brand-name span{color:var(--orange);text-shadow:0 0 18px #ff650088}
+    .hero{padding:72px 0 48px;display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center}
+    .eyebrow{color:var(--yellow);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:12px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:.98;letter-spacing:-3px;margin:15px 0 20px;font-weight:950}
+    h1 span{color:var(--orange);text-shadow:0 0 24px #ff650066}
+    .lead{font-size:18px;line-height:1.65;color:#c7c7c7;max-width:540px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border-radius:999px;padding:15px 23px;font-weight:900;letter-spacing:.4px;transition:.2s}
+    .btn-primary{background:linear-gradient(110deg,var(--yellow),var(--orange));color:#100900;box-shadow:0 0 25px #ff650055}
+    .btn-secondary{border:1px solid #ff7900;color:#ff9b35;background:#ffffff08}
+    .btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
+    .visual{min-height:330px;position:relative;display:grid;place-items:center}
+    .halo{position:absolute;width:290px;height:290px;border:1px solid #ff650066;border-radius:50%;box-shadow:0 0 55px #ff650033,inset 0 0 55px #ff650022}
+    .screen{position:relative;width:min(100%,440px);aspect-ratio:16/10;border:3px solid #ff7900;border-radius:18px;background:linear-gradient(135deg,#222,#080808 60%);box-shadow:0 0 30px #ff650066,0 22px 55px #000;transform:perspective(900px) rotateY(-8deg)}
+    .screen:before{content:"";position:absolute;inset:12px;border-radius:9px;background:radial-gradient(circle at 75% 25%,#ff9b22 0 2%,transparent 3%),linear-gradient(135deg,#321300,#141414 55%,#4a1d00)}
+    .screen-content{position:absolute;inset:32px;display:flex;flex-direction:column;justify-content:space-between}
+    .screen-logo{font-size:clamp(25px,4vw,42px);font-weight:950;font-style:italic;letter-spacing:-2px}
+    .screen-logo span{color:var(--orange)}
+    .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .tile{height:58px;border:1px solid #ff790077;border-radius:8px;background:linear-gradient(135deg,#292929,#111);display:grid;place-items:center;color:#ff9a32;font-weight:900;font-size:11px;text-align:center}
+    .stand{position:absolute;bottom:-24px;width:110px;height:25px;border-bottom:7px solid #ff7900;filter:drop-shadow(0 0 8px #ff6500)}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px auto 58px}
+    .feature{border:1px solid #ffffff14;background:#ffffff06;border-radius:14px;padding:19px 12px;text-align:center;color:#ddd;font-weight:800}
+    .feature b{display:block;color:var(--orange);font-size:25px;margin-bottom:8px}
+    .downloads{padding:38px 0 70px}
+    .section-title{text-align:center;font-size:clamp(28px,4vw,42px);margin:0 0 10px;font-weight:950}
+    .section-title span{color:var(--orange)}
+    .section-sub{text-align:center;color:var(--muted);margin:0 auto 30px;line-height:1.5}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .card{position:relative;overflow:hidden;border:1px solid #ff790077;border-radius:22px;padding:30px;background:linear-gradient(145deg,#171717,#0b0b0b);box-shadow:0 0 25px #ff650018}
+    .card:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--yellow),var(--orange));box-shadow:0 0 18px var(--orange)}
+    .device{font-size:38px;margin-bottom:12px}
+    .card h3{font-size:28px;margin:0 0 8px}
+    .card p{color:#bcbcbc;line-height:1.55;min-height:48px}
+    .card .btn{width:100%;margin-top:12px}
+    .note{text-align:center;color:#888;font-size:13px;margin:20px 0 0}
+    footer{border-top:1px solid #ffffff16;padding:25px 0 35px;text-align:center;color:#888;font-size:13px}
+    footer strong{color:#ff8b28}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px;gap:12px}.visual{min-height:270px}.screen{width:90%}.features{grid-template-columns:repeat(2,1fr);margin-bottom:35px}.cards{grid-template-columns:1fr}.card p{min-height:0}h1{letter-spacing:-2px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="#" aria-label="NexaTV início"><img src="assets/logo.svg" alt=""><div class="brand-name">NEXA<span>TV</span></div></a></div></header>
+  <main>
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow">Entretenimento em um só lugar</div>
+        <h1>SUA TV.<br><span>SEU JEITO.</span></h1>
+        <p class="lead">Escolha seu dispositivo e baixe o aplicativo NexaTV. Uma experiência prática, com acesso pensado para sua tela.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#downloads">⬇ Ver downloads</a>
+          <a class="btn btn-secondary" href="#downloads">Escolher dispositivo</a>
+        </div>
+      </div>
+      <div class="visual" aria-hidden="true"><div class="halo"></div><div class="screen"><div class="screen-content"><div class="screen-logo">NEXA<span>TV</span></div><div class="tiles"><div class="tile">TV</div><div class="tile">NEXA PLAY</div><div class="tile">MOBILE</div></div></div></div><div class="stand"></div></div>
+    </section>
+    <section class="wrap features" aria-label="Destaques">
+      <div class="feature"><b>▣</b>Para sua TV</div>
+      <div class="feature"><b>▯</b>Para celular</div>
+      <div class="feature"><b>⚡</b>Download fácil</div>
+      <div class="feature"><b>◈</b>Visual moderno</div>
+    </section>
+    <section class="downloads" id="downloads">
+      <div class="wrap">
+        <h2 class="section-title">ESCOLHA SEU <span>DOWNLOAD</span></h2>
+        <p class="section-sub">Selecione a versão compatível com seu aparelho.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="device" aria-hidden="true">▣</div>
+            <h3>NexaTV para TV</h3>
+            <p>Versão destinada a dispositivos de TV compatíveis.</p>
+            <a class="btn btn-primary" href="https://drive.google.com/uc?export=download&amp;id=1HX5Huz84pHHvb88DXlTJS38ItmNIn9pX" target="_blank" rel="noopener">⬇ BAIXAR PARA TV</a>
+          </article>
+          <article class="card">
+            <div class="device" aria-hidden="true">▯</div>
+            <h3>NexaTV para celular</h3>
+            <p>Versão para celular Android. Confira a compatibilidade antes de instalar.</p>
+            <a class="btn btn-primary" href="https://drive.google.com/uc?export=download&amp;id=1aMXDr6Ll4OwlADf5sCo68ALGKhKzkAvY" target="_blank" rel="noopener">⬇ BAIXAR PARA CELULAR</a>
+          </article>
+        </div>
+        <p class="note">Os downloads são hospedados no Google Drive. Se solicitado, permita o acesso ao arquivo para iniciar o download.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><strong>NEXATV</strong> · Sua experiência de entretenimento começa aqui.</div></footer>
+</body>
+</html>
